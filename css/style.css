@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    font-family: 'Hind', sans-serif;
+
+
+}
+
+
+/*! HEADER */
+header {
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 0;
+
+    width: 100%;
+
+}
+
+#portNavbar .nav-item .nav-link {
+    color: white;
+    transition: all .5s;
+}
+
+#portNavbar .nav-item:hover .nav-link {
+    color: #35a22c;
+}
+
+/* C1: bằng điểm và code nằm dưới  */
+/* 100 + 10 + 10 = 120 */
+/* #portNavbar .active .nav-link{
+    color: #35a22c;
+} */
+
+/* C2:  điểm cao , không quan tâm thứ tự*/
+/* 100 + 10 +10 +10 = 130 */
+#portNavbar .nav-item.active .nav-link {
+    color: #35a22c;
+}
+
+
+
+/*! CAROUSEL */
+
+/* C1: lấy 1 kích thước hình chuẩn (px) */
+/* #portCarouselCaptions .carousel-item img{
+} */
+#portCarouselCaptions .carousel-item>img {
+    /* height: 1332px; */
+    /* 
+    + vh (carousel): viewport height (lấy kích thước height của màn hình) 
+    + vw (font chữ h1, h2 - tiêu đề quan trọng không muốn bị rớt hàng khi coi ở các màn hình khác nhau ): viewport width (lấy kích thước wight của màn hình)
+
+    %: lấy height, width thẻ cha gần nhất (hình sản phẩm)
+    */
+
+    height: 100vh;
+    object-fit: cover;
+}
+
+#portCarouselCaptions .carousel-caption img {
+    width: 140px;
+    border-radius: 50%;
+}
+
+#portCarouselCaptions .carousel-caption {
+    /*! căn giữa dành cho position */
+    /* % (width, height, top,left...) lấy theo thẻ cha gần nhất */
+    top: 50%;
+    left: 50%;
+    /* % của translate lấy theo kích thước thẻ con */
+    transform: translate(-50%, -50%);
+}
+
+/* PROJECT */
+/* color, spacing, font-size : code riêng CSS3 */
+.projects{
+    padding: 70px 0;
+}
